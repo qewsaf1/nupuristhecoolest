@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(135deg, #f5c6ec, #c77dff);
+  height: 100vh;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 40vh;
+  font-size: 3rem;
+}
+
+.flower-container {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hibiscus {
+  width: 180px;
+  animation: bloom 2s ease-out forwards, float 4s ease-in-out infinite;
+  transform-origin: center;
+  opacity: 0;
+}
+
+/* Bloom animation */
+@keyframes bloom {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
